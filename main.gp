@@ -21,11 +21,11 @@ if(dechiffre(chiffre(m)) != m,error("problème d'énoncé à signaler"));
 c = chiffre(m);
 c[2] *= -1;
 a = dechiffre(c);
-while(( a == 0 || a ==m),
+while(( a == 0 || a ==m),{
 	m = random(1<<500)<<nb+mask;
 	c = chiffre(m);
 	c[2]*=-1;
-	a = dechiffre(c);
+	a = dechiffre(c);}
 );
 
 p = gcd(a+m,n);
